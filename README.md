@@ -41,7 +41,9 @@ To run this agent smoothly on your Android phone, you need:
 Open Termux and run this one-liner command to set up all necessary dependencies:
 
 ```bash
-pkg update && pkg upgrade -y && pkg install python git android-tools -y
+pkg update && pkg upgrade -y
+pkg install python git android-tools clang libjpeg-turbo libpng libffi openssl -y
+pip install --upgrade pip
 ```
 
 ### 2. Clone the Repository
@@ -50,7 +52,6 @@ git clone https://github.com/Rahat0764/ADBAIAgent.git
 cd ADBAIAgent
 pip install -r requirements.txt
 ```
-*(Ensure your `requirements.txt` includes: `pyTelegramBotAPI requests python-dotenv langdetect`)*
 
 ### 3. Connect ADB (Wireless Debugging)
 To allow the script to control your phone, connect ADB locally inside Termux:
