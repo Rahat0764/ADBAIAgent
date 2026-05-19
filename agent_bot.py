@@ -100,7 +100,7 @@ _SAFE_TEXT = re.compile(r"^[\w\s\u0980-\u09FF\-_.,!?@#':\s]+$")
 _ACTION_KEYWORDS = ["খোলো", "চালু", "বন্ধ", "যাও", "দেখাও", "নাও", "পাঠাও", "সার্চ",
                     "open", "start", "go to", "search", "send", "show", "launch", "play"]
 
-SYSTEM_PROMPT = """You are ADB AI Agent, a highly robust step-by-step Android AI Agent. Master: Rahat.
+SYSTEM_PROMPT = """You are OpenClaw, a highly robust step-by-step Android AI Agent. Master: Rahat.
 
 AVAILABLE ACTIONS:
 <action>PLAN</action>               -> Generate a step-by-step flowchart/plan before starting the task. (MUST DO THIS FIRST FOR AUTOMATION TASKS)
@@ -295,8 +295,8 @@ def connect_adb_on_startup() -> str | None:
 def call_provider(messages: list, url: str, key: str, model: str, name: str, task_id: str) -> str | None:
     headers = {"Authorization": f"Bearer {key}", "Content-Type": "application/json"}
     if "openrouter" in url:
-        headers["HTTP-Referer"] = "https://github.com/ADB AI Agent"
-        headers["X-Title"] = "ADB AI Agent"
+        headers["HTTP-Referer"] = "https://github.com/OpenClaw"
+        headers["X-Title"] = "OpenClaw"
     payload = {"model": model, "messages": messages, "temperature": 0.1, "max_tokens": 2048}
     try:
         resp = requests.post(url, json=payload, headers=headers, timeout=25)
@@ -681,7 +681,7 @@ def handle_confirm(call):
 @bot.message_handler(commands=['start'])
 def cmd_start(message):
     if not is_authorized(message.from_user.id): return
-    bot.reply_to(message, "🚀 ADB AI Agent অনলাইন!")
+    bot.reply_to(message, "🚀 OpenClaw অনলাইন!")
 
 @bot.message_handler(commands=['cancel'])
 def cmd_cancel(message):
@@ -779,11 +779,11 @@ def handle_message(message):
 if __name__ == "__main__":
     device_model = connect_adb_on_startup()
     if device_model:
-        status_msg = f"🟢 ADB AI Agent Online!\n✅ ADB Connected\nDevice: <code>{html.escape(device_model)}</code>"
+        status_msg = f"🟢 OpenClaw Online!\n✅ ADB Connected\nDevice: <code>{html.escape(device_model)}</code>"
     else:
-        status_msg = "🟢 ADB AI Agent Online!\n⚠️ ADB Not Connected"
+        status_msg = "🟢 OpenClaw Online!\n⚠️ ADB Not Connected"
 
-    print(f"✅ ADB AI Agent Active | Device: {device_model}")
+    print(f"✅ OpenClaw Active | Device: {device_model}")
 
     for uid in ALLOWED_USERS:
         try:
