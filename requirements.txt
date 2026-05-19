@@ -1,0 +1,9 @@
+pyTelegramBotAPI
+requests
+python-dotenv
+langdetect
+openai
+google-generativeai
+Pillow
+pytz
+psutil
