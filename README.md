@@ -1,6 +1,6 @@
 <div align="center">
   
-# 🤖 OpenClaw: Autonomous Android AI Agent
+# 🤖 ADB AI Agent: Autonomous Android AI Agent
 
 [![Python](https://img.shields.io/badge/Python-3.10+-blue?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 [![Termux](https://img.shields.io/badge/Termux-Supported-black?style=for-the-badge&logo=termux&logoColor=white)](https://termux.dev/)
@@ -9,7 +9,7 @@
 [![LinkedIn](https://img.shields.io/badge/Connect-LinkedIn-0a66c2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/RahatAhmedX)
 
 **An enterprise-grade, step-by-step multimodal Android AI Operating Framework.**
-OpenClaw brings autonomous UI navigation, Vibe Coding, Voice Control, and Interactive Planning directly to your Android device via ADB and Telegram.
+ADB AI Agent brings autonomous UI navigation, Vibe Coding, Voice Control, and Interactive Planning directly to your Android device via ADB and Telegram.
 
 </div>
 
@@ -46,7 +46,7 @@ pkg update && pkg upgrade -y && pkg install python git android-tools -y
 
 ### 2. Clone the Repository
 ```bash
-git clone [https://github.com/Rahat0764/ADBAIAgent.git](https://github.com/Rahat0764/ADBAIAgent.git)
+git clone https://github.com/Rahat0764/ADBAIAgent.git
 cd ADBAIAgent
 pip install -r requirements.txt
 ```
