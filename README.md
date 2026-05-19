@@ -87,7 +87,7 @@ python agent_bot.py
 ### Commands in Telegram:
 - **Casual Chat:** Just type "Hello" or ask questions. The bot will chat naturally in Bengali/English without triggering automation.
 - **Automation Trigger:** Prefix your command with `AC` (Action) or `CD` (Coding). 
-  - *Example:* `AC Play store theke free fire download koro`
+  - *Example:* `AC Download Genshin Impact from play store`
 - **Confirmation:** The AI will generate a plan with Inline Buttons. Tap **✅ Continue** to execute or **❌ Cancel** to abort.
 - **Bot Commands:**
   - `/start` - Check if the bot is alive.
